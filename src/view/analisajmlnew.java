@@ -1,6 +1,7 @@
 package view;
 
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
 
@@ -17,6 +18,10 @@ public class analisajmlnew extends javax.swing.JFrame {
     
     public JButton getAnalisa() {
         return btn_analisa;
+    }
+    
+    public JCheckBox getCek(){
+        return lahan;
     }
     
     public JTextField getModal(){
@@ -40,20 +45,26 @@ public class analisajmlnew extends javax.swing.JFrame {
         jenis = new javax.swing.JComboBox();
         btn_analisa = new javax.swing.JButton();
         btn_home = new javax.swing.JButton();
+        lahan = new javax.swing.JCheckBox();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        field_lahan.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
+        field_lahan.setText("0");
         field_lahan.setBorder(null);
-        getContentPane().add(field_lahan, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 310, 190, 40));
+        getContentPane().add(field_lahan, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 240, 190, 40));
 
+        field_modal.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
+        field_modal.setText("0");
         field_modal.setBorder(null);
-        getContentPane().add(field_modal, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 380, 180, 40));
+        getContentPane().add(field_modal, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 370, 180, 40));
 
+        jenis.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
         jenis.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "BEBEK PETELUR", "BEBEK PEDAGING" }));
         jenis.setBorder(null);
-        getContentPane().add(jenis, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 440, 180, 50));
+        getContentPane().add(jenis, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 440, 180, 40));
 
         btn_analisa.setBorder(null);
         btn_analisa.setContentAreaFilled(false);
@@ -65,7 +76,11 @@ public class analisajmlnew extends javax.swing.JFrame {
         btn_home.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(btn_home, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 630, 60, 50));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/2.png"))); // NOI18N
+        lahan.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
+        lahan.setText("sudah punya kandang.?");
+        getContentPane().add(lahan, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 310, 190, 30));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/2.jpg"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
@@ -110,5 +125,6 @@ public class analisajmlnew extends javax.swing.JFrame {
     private javax.swing.JTextField field_modal;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JComboBox jenis;
+    private javax.swing.JCheckBox lahan;
     // End of variables declaration//GEN-END:variables
 }

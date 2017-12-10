@@ -8,6 +8,7 @@ public class hasilanalisajumlah extends javax.swing.JFrame {
 
     public hasilanalisajumlah() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     public void setHasil(String hasil){
@@ -30,7 +31,6 @@ public class hasilanalisajumlah extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1000, 706));
         setMinimumSize(new java.awt.Dimension(1000, 706));
-        setPreferredSize(new java.awt.Dimension(1000, 706));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btn_home.setBorder(null);
@@ -39,12 +39,18 @@ public class hasilanalisajumlah extends javax.swing.JFrame {
         btn_home.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(btn_home, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 640, 70, 60));
 
+        hasil.setBackground(new java.awt.Color(0, 0, 0));
         hasil.setBorder(null);
+        hasil.setWheelScrollingEnabled(false);
 
         text_hasil.setColumns(20);
-        text_hasil.setRows(5);
+        text_hasil.setFont(new java.awt.Font("SansSerif", 1, 17)); // NOI18N
+        text_hasil.setLineWrap(true);
+        text_hasil.setRows(1);
+        text_hasil.setToolTipText("");
         text_hasil.setBorder(null);
         text_hasil.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        text_hasil.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         text_hasil.setEnabled(false);
         hasil.setViewportView(text_hasil);
         text_hasil.getAccessibleContext().setAccessibleParent(text_hasil);
